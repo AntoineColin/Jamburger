@@ -2969,6 +2969,16 @@ Prefab:
       propertyPath: m_Name
       value: PlayerFuture
       objectReference: {fileID: 0}
+    - target: {fileID: 114863761229039396, guid: f787b42df21fa49128e4e5d1bcfc02ed,
+        type: 2}
+      propertyPath: fallMultiplier
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50617499393891082, guid: f787b42df21fa49128e4e5d1bcfc02ed,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f787b42df21fa49128e4e5d1bcfc02ed, type: 2}
   m_IsPrefabParent: 0

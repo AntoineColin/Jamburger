@@ -209,6 +209,7 @@ MonoBehaviour:
   CanMove: 1
   speed: 3
   jumpHeight: 4
+  fallMultiplier: 2.5
   footsteps:
   - {fileID: 8300000, guid: ba8e595083e8cc249bab5d84f5415222, type: 3}
   - {fileID: 8300000, guid: 6bbc65218646a3543bb7c98d3f3e4e77, type: 3}
