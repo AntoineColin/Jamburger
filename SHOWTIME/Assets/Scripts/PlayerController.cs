@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 	
 	private Transform body;
 
-	private static float JUMPHEIGHT = 4;
+	public float JUMPHEIGHT = 4;
 	
 	private Rigidbody2D rb2d;
 	
@@ -45,26 +45,33 @@ public class PlayerController : MonoBehaviour
 		if (CanMove)
 		{
 			float moveHorizontal = Input.GetAxis("Horizontal");
-			float moveVertical = rb2d.velocity.y;
-			
-			if (Input.GetKeyDown(KeyCode.W))
-			{
-				moveVertical += Vector2.up.y * JUMPHEIGHT;
-			}
+			Vector2 moveVertical = new Vector2(0, Input.GetAxisRaw ("Vertical") * JUMPHEIGHT);
 
-			rb2d.velocity = new Vector2(moveHorizontal*speed, moveVertical);
+			//Set to zero the x velocity to disable inertia
+			rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.up);
+			//Add the speed of walking of the character
+			rb2d.velocity += new Vector2(moveHorizontal*speed, 0);
+
+			if(canJump){
+				Jump (moveVertical);
+			}
 		}
 	}
 
 	void Jump(Vector2 jumpVector){
-		
+		//Set to zero the y velocity to disable inertia and to do all the time the same jump
+		rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.right);
+		//Add the vector to jump
+		rb2d.velocity += jumpVector;
 	}
 
 	void OnTriggerStay2D(Collider2D coll){
+		//if it touch the ground it can jump
 		canJump = true;
 	}
 
-	void OnTriggerLeave2D(Collider2D coll){
+	void OnTriggerExit2D(Collider2D coll){
+		//if it isn't on the ground anymore it can't jump
 		canJump = false;
 	}
 }
