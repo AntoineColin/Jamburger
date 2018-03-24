@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 20884006642233226}
   - component: {fileID: 124029027562283176}
   - component: {fileID: 81725735431029034}
+  - component: {fileID: 114091337998313688}
   m_Layer: 0
-  m_Name: CamPresent
+  m_Name: CamSplited
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1344818251026622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8.009999, z: -10}
+  m_LocalPosition: {x: 0, y: -5.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,7 +73,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -85,6 +86,22 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1344818251026622}
   m_Enabled: 1
+--- !u!114 &114091337998313688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344818251026622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de4f9f3835e27c4d8822d3e7f3e0a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothSpeed: 0.8
+  xLiberty: 12
+  yLiberty: 3
+  waitTime: 5
+  player: {fileID: 0}
 --- !u!124 &124029027562283176
 Behaviour:
   m_ObjectHideFlags: 1
