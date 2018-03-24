@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour {
     public GameObject PlayerFuture;
     public Material diffuse;
     public Material sprite;
-    int counter = 0;
+    public int counter = 0;
     // Use this for initialization
     void Start () {
         SleepPlayer(1);
