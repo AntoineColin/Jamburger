@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 	public bool CanMove = false;
 	public float speed;
 
-	private Vector2 startPosition;
+	Vector2 startPosition;
 	private Vector2 pos;
 	
 	private Transform body;
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (CanMove)
 		{
-			float moveHorizontal = body.position.x;
+			float moveHorizontal = 0;
 			if (Input.GetKeyDown(KeyCode.D))
 			{
 				moveHorizontal += Vector2.right.x;
@@ -52,16 +52,15 @@ public class PlayerController : MonoBehaviour
 			{
 				moveHorizontal += Vector2.left.x;
 			}
-			float moveVertical = body.position.y;
+			float moveVertical = 0;
+			
 			if (Input.GetKeyDown(KeyCode.W))
 			{
 				moveVertical += Vector2.up.y;
 			}
 
-			Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-
-			//Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-			rb2d.AddForce(movement * speed);
+			rb2d.velocity = new Vector2(moveHorizontal*speed, moveVertical);
+			
 		}
 	}
 }
