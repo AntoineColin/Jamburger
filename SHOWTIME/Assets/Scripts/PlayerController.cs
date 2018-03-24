@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 	public bool CanMove = false;
 	private bool canJump = true;
 	public float speed;
-	public float jumpHeight = 4;
+	public float jumpHeight = 1000;
 
 	public AudioClip[] footsteps;
 	public AudioSource source;
@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 		{
 			float moveHorizontal = Input.GetAxis("Horizontal");
 			Vector2 moveVertical = new Vector2(0, Input.GetAxisRaw ("Vertical") * jumpHeight);
+			
 
 			//Set to zero the x velocity to disable inertia
 			rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.up);
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour
 		//Set to zero the y velocity to disable inertia and to do all the time the same jump
 		rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.right);
 		//Add the vector to jump
+		
 		rb2d.velocity += jumpVector;
 	}
 

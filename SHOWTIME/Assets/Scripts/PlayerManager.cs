@@ -35,7 +35,7 @@ public class PlayerManager : MonoBehaviour {
             WakePlayer(0);
             throw new Exception("No player is playable");
         }
-
+        // more than one player can not be playable.
         if (Utilities.TernaryXor(PlayerFutureMoving, PlayerPresentMoving, PlayerPastMoving) == false)
         {
             if (PlayerPresentMoving)
