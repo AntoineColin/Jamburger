@@ -8,8 +8,7 @@ public class Utilities : MonoBehaviour {
 	public static bool TernaryXor(bool a, bool b, bool c)
 	{
 		//return ((a && !b && !c) || (!a && b && !c) || (!a && !b && c));
-
-		// taking into account Jim Mischel's comment, a faster solution would be:
+		//shorted version of function.
 		return (!a && (b ^ c)) || (a && !(b || c));
 	}
 	

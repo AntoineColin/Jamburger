@@ -11,7 +11,9 @@ public class PlayerController : MonoBehaviour
 	public bool CanMove = false;
 	private bool canJump = true;
 	public float speed;
-	public float jumpHeight = 4;
+	float jumpHeight = 20f;
+	//public float lowJumpHeight = 2.5f;
+	public float fallMultiplier = 500f;
 
 	public AudioClip[] footsteps;
 	public AudioSource source;
@@ -30,35 +32,16 @@ public class PlayerController : MonoBehaviour
 		{
 			Player = this;
 		}
+		rb2d = GetComponent<Rigidbody2D> ();
 	}
 	void Start () {
 
 		body = transform;
-		rb2d = GetComponent<Rigidbody2D> ();
 		source = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//do nothing yet
-	}
-
-	private void FixedUpdate()
-	{
-		if (CanMove)
-		{
-			float moveHorizontal = Input.GetAxis("Horizontal");
-			Vector2 moveVertical = new Vector2(0, Input.GetAxisRaw ("Vertical") * jumpHeight);
-
-			//Set to zero the x velocity to disable inertia
-			rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.up);
-			//Add the speed of walking of the character
-			rb2d.velocity += new Vector2(moveHorizontal*speed, 0);
-
-			if(canJump){
-				Jump (moveVertical);
-			}
-		}
 		/*
 		 * PLAYING SOUNDS
 		 */
@@ -70,12 +53,34 @@ public class PlayerController : MonoBehaviour
 			StartCoroutine (playFootSteps (soundLength));
 		}
 	}
+ 
+	private void FixedUpdate()
+	{
+		//ONLY FOR PHYSICS DON'T PUT ANYTHING ELSE IN HERE OR THERE WILL BE BUGS!!
+		if (CanMove)
+		{
+			float moveHorizontal = Input.GetAxis("Horizontal");
 
-	void Jump(Vector2 jumpVector){
+			rb2d.AddForce(Vector2.up*Physics2D.gravity.y*fallMultiplier, ForceMode2D.Force);
+			//Set to zero the x velocity to disable inertia
+			rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.up);
+			//rb2d.velocity = Vector2.zero;
+			rb2d.velocity += new Vector2(moveHorizontal*speed, 0f);
+			//Add the speed of walking of the character
+			if(canJump && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))){
+				Jump();
+			}
+		}
+
+	}
+
+	void Jump(){
 		//Set to zero the y velocity to disable inertia and to do all the time the same jump
-		rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.right);
+		//rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.right);
 		//Add the vector to jump
-		rb2d.velocity += jumpVector;
+		
+		rb2d.velocity += Vector2.up * jumpHeight;
+		//rb2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
 	}
 
 	void OnTriggerStay2D(Collider2D coll){
