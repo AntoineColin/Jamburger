@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 	
 	private Transform body;
 
-	private static double JUMPHEIGHT = 10.0;
+	private static float JUMPHEIGHT = 4;
 	
 	private Rigidbody2D rb2d;
 	
@@ -43,20 +43,12 @@ public class PlayerController : MonoBehaviour
 	{
 		if (CanMove)
 		{
-			float moveHorizontal = 0;
-			if (Input.GetKeyDown(KeyCode.D))
-			{
-				moveHorizontal += Vector2.right.x;
-			}
-			else if (Input.GetKeyDown(KeyCode.A))
-			{
-				moveHorizontal += Vector2.left.x;
-			}
-			float moveVertical = 0;
+			float moveHorizontal = Input.GetAxis("Horizontal");
+			float moveVertical = rb2d.velocity.y;
 			
 			if (Input.GetKeyDown(KeyCode.W))
 			{
-				moveVertical += Vector2.up.y;
+				moveVertical += Vector2.up.y * JUMPHEIGHT;
 			}
 
 			rb2d.velocity = new Vector2(moveHorizontal*speed, moveVertical);
