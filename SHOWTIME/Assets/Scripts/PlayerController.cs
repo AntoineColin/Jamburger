@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
 	PlayerController Player;
 	public bool CanMove = false;
+	private bool canJump = true;
 	public float speed;
 
 	Vector2 startPosition;
@@ -52,7 +53,18 @@ public class PlayerController : MonoBehaviour
 			}
 
 			rb2d.velocity = new Vector2(moveHorizontal*speed, moveVertical);
-			
 		}
+	}
+
+	void Jump(Vector2 jumpVector){
+		
+	}
+
+	void OnTriggerStay2D(Collider2D coll){
+		canJump = true;
+	}
+
+	void OnTriggerLeave2D(Collider2D coll){
+		canJump = false;
 	}
 }
