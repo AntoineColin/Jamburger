@@ -4969,6 +4969,11 @@ Prefab:
       propertyPath: m_NormalizedViewPortRect.y
       value: 0.66
       objectReference: {fileID: 0}
+    - target: {fileID: 81725735431029034, guid: eaea3e76195cd4de986ed5fc7199f28e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eaea3e76195cd4de986ed5fc7199f28e, type: 2}
   m_IsPrefabParent: 0
@@ -12197,6 +12202,11 @@ Prefab:
     - target: {fileID: 20884006642233226, guid: eaea3e76195cd4de986ed5fc7199f28e,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 81725735431029034, guid: eaea3e76195cd4de986ed5fc7199f28e,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

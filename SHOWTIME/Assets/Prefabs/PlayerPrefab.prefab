@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50617499393891082}
   - component: {fileID: 61346875178979522}
   - component: {fileID: 61330588242602266}
+  - component: {fileID: 82340401820072406}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -114,6 +115,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!82 &82340401820072406
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231455716775216}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114863761229039396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,6 +208,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanMove: 1
   speed: 3
+  jumpHeight: 4
+  footsteps:
+  - {fileID: 8300000, guid: ba8e595083e8cc249bab5d84f5415222, type: 3}
+  - {fileID: 8300000, guid: 6bbc65218646a3543bb7c98d3f3e4e77, type: 3}
+  - {fileID: 8300000, guid: f433c1a5a991836488076b4607bd53c8, type: 3}
+  - {fileID: 8300000, guid: 054ba3299fceea84da779a209c414d8a, type: 3}
+  - {fileID: 8300000, guid: cb454cf518e114b4aaf76fd0ab5fd827, type: 3}
+  source: {fileID: 0}
 --- !u!212 &212024232984027694
 SpriteRenderer:
   m_ObjectHideFlags: 1
