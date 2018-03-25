@@ -11,15 +11,16 @@ public class PlayerController : MonoBehaviour
 	public bool CanMove = false;
 	private bool canJump = true;
 	public float speed;
-	float jumpHeight = 20f;
-	//public float lowJumpHeight = 2.5f;
-	public float fallMultiplier = 500f;
+	float jumpHeight = 15f;
+	public float falldownfast = 500f;
+	public float fallMultiplier = 10000f;
 
 	public AudioClip[] footsteps;
 	public AudioSource source;
 	private bool canPlayFoot = true;
 
 	private Transform body;
+	private int frames = 0;
 
 
 	
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour
 		/*
 		 * PLAYING SOUNDS
 		 */
-		if(rb2d.velocity.x!=0 && canPlayFoot){
+		if(rb2d.velocity.x!=0 && canJump && canPlayFoot){
 			int rand = UnityEngine.Random.Range (1,footsteps.Length);
 			float soundLength = footsteps [rand - 1].length;
 			source.PlayOneShot (footsteps[rand-1], 0.6f);
@@ -56,11 +57,21 @@ public class PlayerController : MonoBehaviour
  
 	private void FixedUpdate()
 	{
-		//ONLY FOR PHYSICS DON'T PUT ANYTHING ELSE IN HERE OR THERE WILL BE BUGS!!
 		if (CanMove)
-		{
+		{ 
 			float moveHorizontal = Input.GetAxis("Horizontal");
+			//Really tweaking the jump there. 
+			frames++;
+			if (rb2d.velocity.y < 0)
+			{
+				if (frames == 4)
+				{
+					frames = 0;
+					rb2d.velocity += Vector2.down*falldownfast;
+				}
+			}
 
+			Debug.Log(rb2d.velocity);
 			rb2d.AddForce(Vector2.up*Physics2D.gravity.y*fallMultiplier, ForceMode2D.Force);
 			//Set to zero the x velocity to disable inertia
 			rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.up);

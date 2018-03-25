@@ -2,12 +2,27 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="Editor" t="Include">
+            <e p="JetBrains" t="Include">
+              <e p="Unity3DRider.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="CameraMove.cs" t="Include" />
+          <e p="ObjectInteract.cs" t="Include" />
+          <e p="Pickup.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
+          <e p="SmallScripts" t="Include">
+            <e p="Bucket.cs" t="Include" />
+            <e p="TreeGrowth.cs" t="Include" />
+          </e>
+          <e p="Station.cs" t="Include" />
           <e p="Utilities.cs" t="Include" />
         </e>
       </e>
