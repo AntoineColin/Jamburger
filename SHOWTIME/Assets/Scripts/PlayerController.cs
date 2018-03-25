@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 	public bool CanMove = false;
 	private bool canJump = true;
 	public float speed;
-	float jumpHeight = 15f;
+	public float jumpHeight = 15f;
 	public float falldownfast = 500f;
 	public float fallMultiplier = 10000f;
 
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
 				}
 			}
 
-			Debug.Log(rb2d.velocity);
+			//Debug.Log(rb2d.velocity);
 			rb2d.AddForce(Vector2.up*Physics2D.gravity.y*fallMultiplier, ForceMode2D.Force);
 			//Set to zero the x velocity to disable inertia
 			rb2d.velocity = Vector2.Scale (rb2d.velocity, Vector2.up);

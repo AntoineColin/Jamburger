@@ -1,9 +1,17 @@
 ﻿
+<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHOWTIME", "Assembly-CSharp.csproj", "{F8FBEB85-1C9E-237B-4C5F-55F4E440E9F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHOWTIME", "Assembly-CSharp-Editor-firstpass.csproj", "{70EF1C0A-C5F8-3318-A7A9-C357C6B2726E}"
+=======
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHOWTIME", "SHOWTIME.csproj", "{6FCF1496-1F23-315E-7BB4-1EBA4C0B6A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHOWTIME.Editor.Plugins", "SHOWTIME.Editor.Plugins.csproj", "{E222E0EC-9554-DD0F-01DD-83774E630FF0}"
+>>>>>>> origin/doot
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +19,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{F8FBEB85-1C9E-237B-4C5F-55F4E440E9F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F8FBEB85-1C9E-237B-4C5F-55F4E440E9F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8FBEB85-1C9E-237B-4C5F-55F4E440E9F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -19,11 +28,18 @@ Global
 		{70EF1C0A-C5F8-3318-A7A9-C357C6B2726E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70EF1C0A-C5F8-3318-A7A9-C357C6B2726E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70EF1C0A-C5F8-3318-A7A9-C357C6B2726E}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{6FCF1496-1F23-315E-7BB4-1EBA4C0B6A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCF1496-1F23-315E-7BB4-1EBA4C0B6A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCF1496-1F23-315E-7BB4-1EBA4C0B6A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCF1496-1F23-315E-7BB4-1EBA4C0B6A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E222E0EC-9554-DD0F-01DD-83774E630FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E222E0EC-9554-DD0F-01DD-83774E630FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E222E0EC-9554-DD0F-01DD-83774E630FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E222E0EC-9554-DD0F-01DD-83774E630FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> origin/doot
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
