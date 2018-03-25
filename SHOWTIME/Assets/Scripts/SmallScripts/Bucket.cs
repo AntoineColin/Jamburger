@@ -6,7 +6,7 @@ public class Bucket : MonoBehaviour {
     public Sprite unfilled;
     public Sprite filled;
     bool inWater;
-    bool done = false;
+    public bool done = false;
 	// Use this for initialization
 	void Start () {
         GetComponent<SpriteRenderer>().sprite = unfilled;
