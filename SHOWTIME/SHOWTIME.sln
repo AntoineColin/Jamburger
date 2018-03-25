@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{F8FBEB85-1C9E-237B-4C5F-55F4E440E9F8}"
 EndProject
 Project("{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{70EF1C0A-C5F8-3318-A7A9-C357C6B2726E}"
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHOWTIME", "Assembly-CSharp.csproj", "{F8FBEB85-1C9E-237B-4C5F-55F4E440E9F8}"
+>>>>>>> ce6ff94dc85698129bdb527962861a2d6cac072f
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +22,13 @@ Global
 		{F8FBEB85-1C9E-237B-4C5F-55F4E440E9F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8FBEB85-1C9E-237B-4C5F-55F4E440E9F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8FBEB85-1C9E-237B-4C5F-55F4E440E9F8}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{70EF1C0A-C5F8-3318-A7A9-C357C6B2726E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{70EF1C0A-C5F8-3318-A7A9-C357C6B2726E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70EF1C0A-C5F8-3318-A7A9-C357C6B2726E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70EF1C0A-C5F8-3318-A7A9-C357C6B2726E}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> ce6ff94dc85698129bdb527962861a2d6cac072f
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

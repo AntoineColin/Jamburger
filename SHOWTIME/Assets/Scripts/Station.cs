@@ -16,7 +16,7 @@ public class Station : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(Player.position,transform.position)<=2) {
+        if (Vector3.Distance(Player.position,transform.position)<=2.5) {
             if (Input.GetButtonDown("Decrement"))
             {
                 if (pickup != null)

@@ -18,16 +18,35 @@ public class TreeGrowth : MonoBehaviour {
 	void Update () {
 		if(bucket && seed)
         {
+            Debug.Log("cool");
             done = true;
 
+        } else
+        {
+            done = false;
+        }
+        if (done)
+        {
+            treeTop.SetActive(true);
+            treeTrunk.SetActive(true);
+            smalltree.SetActive(true);
+        } else
+        {
+            treeTop.SetActive(false);
+            treeTrunk.SetActive(false);
+            smalltree.SetActive(false);
         }
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "Bucket")
         {
- 
-            bucket = true;
+            if (collision.GetComponent<Bucket>().done)
+            {
+                bucket = true;
+                collision.GetComponent<Bucket>().GetComponent<SpriteRenderer>().sprite = collision.GetComponent<Bucket>().unfilled;
+                collision.GetComponent<Bucket>().done = false;
+            }
         }
         if (collision.name == "Seed")
         {
@@ -46,16 +65,7 @@ public class TreeGrowth : MonoBehaviour {
                 seed = false;
             }
         }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (done && collision.gameObject.layer == 8)
-        {
-            treeTop.SetActive(true);
-            treeTrunk.SetActive(true);
-            smalltree.SetActive(true);
-            Destroy(collision.gameObject);
-        }
-    }
+
 }
 
 

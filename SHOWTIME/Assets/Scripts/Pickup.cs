@@ -38,6 +38,7 @@ public class Pickup : MonoBehaviour {
         {
             pickup = false;
             following = null;
+            transform.localScale = sScale;
         }
         if (pickup)
         {
@@ -65,6 +66,7 @@ public class Pickup : MonoBehaviour {
                 {
                     pickup = false;
                     following = null;
+            transform.position = new Vector3(transform.position.x + Random.Range(-1, 1), transform.position.y, transform.position.z);
                // Debug.Log(pickup);
                 transform.localScale = sScale;
                 GetComponent<SpriteRenderer>().sortingOrder= -1;

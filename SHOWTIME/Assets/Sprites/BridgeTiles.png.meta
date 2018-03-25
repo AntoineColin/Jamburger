@@ -9,6 +9,10 @@ TextureImporter:
     21300004: BridgeTiles_2
     21300006: BridgeTiles_3
     21300008: BridgeTiles_4
+    21300010: BridgeTiles_5
+    21300012: BridgeTiles_6
+    21300014: BridgeTiles_7
+    21300016: BridgeTiles_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -131,7 +135,7 @@ TextureImporter:
       name: BridgeTiles_3
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 16
         width: 16
         height: 16
@@ -143,6 +147,62 @@ TextureImporter:
       tessellationDetail: 0
     - serializedVersion: 2
       name: BridgeTiles_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BridgeTiles_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BridgeTiles_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BridgeTiles_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BridgeTiles_8
       rect:
         serializedVersion: 2
         x: 32
