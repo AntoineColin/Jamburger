@@ -7,9 +7,13 @@ public class Bucket : MonoBehaviour {
     public Sprite filled;
     bool inWater;
     public bool done = false;
+
+	AudioSource source;
+	public AudioClip splashSound;
 	// Use this for initialization
 	void Start () {
         GetComponent<SpriteRenderer>().sprite = unfilled;
+		source = GetComponent < AudioSource >();
 	}
 	
 	// Update is called once per frame
@@ -25,10 +29,13 @@ public class Bucket : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
+		Debug.Log(inWater);
         if(collision.name == "Water")
         {
+			
             inWater = true;
-            //Debug.Log(inWater);
+			source.PlayOneShot (splashSound);
+            
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

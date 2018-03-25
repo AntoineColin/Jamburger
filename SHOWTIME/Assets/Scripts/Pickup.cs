@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour {
     GameObject Manager;
+
     public bool pickup = false;
     public enum Time { Past, Present, Future };
     public Time timeline;
@@ -11,11 +12,15 @@ public class Pickup : MonoBehaviour {
     public GameObject following;
     Vector3 sScale;
     public Vector3 smallScale = new Vector3(2,2,2);
+
+	AudioSource source;
+	public AudioClip pickSound;
     // Use this for initialization
     void Start()
     {
         sScale = transform.localScale;
         Manager = GameObject.Find("PlayerManager");
+		source = GetComponent <AudioSource> ();
         if (timeline == Time.Past)
         {
             counter = 0;
@@ -60,7 +65,10 @@ public class Pickup : MonoBehaviour {
                // Debug.Log(pickup);
                 transform.localScale = smallScale;
                 GetComponent<SpriteRenderer>().sortingOrder = 1;
-
+				/*
+				 * Sound
+				 */
+				source.PlayOneShot (pickSound);
             }else 
                 if (Input.GetButtonDown("Interact") && pickup)
                 {

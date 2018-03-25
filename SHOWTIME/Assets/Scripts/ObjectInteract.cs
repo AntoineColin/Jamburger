@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.Types;
 
 public class ObjectInteract : MonoBehaviour {
     GameObject Manager;
+	AudioSource source;
     
     public enum Time {Past, Present, Future};
     public Time timeline;
@@ -11,6 +13,7 @@ public class ObjectInteract : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Manager = GameObject.Find("PlayerManager");
+		source = GetComponent<AudioSource> ();
 		if (timeline == Time.Past)
         {
             counter = 0;
@@ -32,6 +35,7 @@ public class ObjectInteract : MonoBehaviour {
             if (Input.GetButtonDown("Interact") && hit != null)
             {
                 //Debug.Log(hit.collider.gameObject.name);
+
             }
         }
 	}

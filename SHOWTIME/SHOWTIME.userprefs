@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SmallScripts\Bucket.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="58" Column="3" />
-      <File FileName="Assets\Scripts\CameraMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ObjectInteract.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Pickup.cs" Line="17" Column="9" />
+      <File FileName="Assets\Scripts\SmallScripts\Bucket.cs" Line="34" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
