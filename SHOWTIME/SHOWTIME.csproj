@@ -240,6 +240,8 @@
     <Compile Include="Assets\Scripts\Pickup.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\SmallScripts\Bucket.cs" />
+    <Compile Include="Assets\Scripts\SmallScripts\TreeGrowth.cs" />
     <Compile Include="Assets\Scripts\Station.cs" />
     <Compile Include="Assets\Scripts\Utilities.cs" />
   </ItemGroup>

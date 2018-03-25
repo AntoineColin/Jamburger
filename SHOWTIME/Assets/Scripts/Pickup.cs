@@ -51,12 +51,12 @@ public class Pickup : MonoBehaviour {
            
         if (Input.GetButtonDown("Interact") && !pickup)
             {
-                Debug.Log(hit.collider.gameObject.name);
+               // Debug.Log(hit.collider.gameObject.name);
                 pickup = true;
 
                 following = hit.transform.gameObject;
 
-                Debug.Log(pickup);
+               // Debug.Log(pickup);
                 transform.localScale = smallScale;
                 GetComponent<SpriteRenderer>().sortingOrder = 1;
 
