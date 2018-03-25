@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 93e03df1e5ce2d64c9805130ce3f7ea4
+timeCreated: 1521982818
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Share Tech
+  fontNames:
+  - Share Tech
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
