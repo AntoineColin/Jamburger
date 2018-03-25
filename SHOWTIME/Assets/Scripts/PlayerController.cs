@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 	public AudioSource source;
 	private bool canPlayFoot = true;
 
+	private Animator anim;
+
 	private Transform body;
 	private int frames = 0;
 
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
 		body = transform;
 		source = GetComponent<AudioSource> ();
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -52,6 +55,10 @@ public class PlayerController : MonoBehaviour
 			source.PlayOneShot (footsteps[rand-1], 0.6f);
 			canPlayFoot = false;
 			StartCoroutine (playFootSteps (soundLength));
+		}
+		if(Input.GetAxisRaw ("Horizontal") == 1){
+			Debug.Log ("left");
+			anim.SetTrigger ("right");
 		}
 	}
  
